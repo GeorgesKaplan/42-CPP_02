@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:55:45 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/21 11:48:02 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/21 11:55:18 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main(void)
 	Fixed b( a );
 	Fixed c;
 
-	// c = b;
+	c = b;
 	std::cout << a.getRawBits() << std::endl;
 	std::cout << b.getRawBits() << std::endl;
 	std::cout << c.getRawBits() << std::endl;

@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:55:47 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/21 11:31:20 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/21 11:47:32 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,10 @@ Fixed::~Fixed()
 Fixed::Fixed(const Fixed &to_copy)
 {
 	std::cout << "Copy constructor called" << std::endl;
+	this->_fixed = to_copy._fixed;
 }
 
-Fixed &Fixed::operator=(const Fixed &to_copy)
-{
-	std::cout << "Copy assignment operator called" << std::endl;
-}
+// Fixed &Fixed::operator=(const Fixed &to_copy)
+// {
+// 	std::cout << "Copy assignment operator called" << std::endl;
+// }

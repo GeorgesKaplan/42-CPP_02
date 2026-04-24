@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:55:45 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/21 12:37:03 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/24 16:15:15 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,26 @@
 int main(void)
 {
 	Fixed a;
-	Fixed const b(10);
-	Fixed const c(42.42f);
-	Fixed const d(b);
-
 	a = Fixed(1234.4321f);
-	std::cout << "a is " << a << std::endl;
-	std::cout << "b is " << b << std::endl;
-	std::cout << "c is " << c << std::endl;
-	std::cout << "d is " << d << std::endl;
-	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+	Fixed const b(10.0f);
+	Fixed const c = b;
+
+	std::cout << "VARIABLES INITIALISATION" << std::endl;
+	std::cout << "a = " << a << "\nb = " << b << "\nc = " << c << std::endl;
+	std::cout << std::endl;
+	std::cout << "LOGICAL OPERATORS" << std::endl;
+	std::cout << "Is  a > b : " << (a > b) << std::endl;
+	std::cout << "Is  a < b : " << (a < b) << std::endl;
+	std::cout << "Is b >= c : " << (b >= c) << std::endl;
+	std::cout << "Is b <= c : " << (b <= c) << std::endl;
+	std::cout << "Is a == c : " << (a == c) << std::endl;
+	std::cout << "Is a != c : " << (a != c) << std::endl;
+	std::cout << std::endl;
+	std::cout << "ARITHMETIC OPERATORS" << std::endl;
+	std::cout << "a + b = " << (a + b) << std::endl;
+	std::cout << "a - b = " << (a - b) << std::endl;
+	std::cout << "a * b = " << (a * b) << std::endl;
+	std::cout << "a / b = " << (a / b) << std::endl;
 
 	return (0);
 }

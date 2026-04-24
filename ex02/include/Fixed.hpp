@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:55:42 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/24 12:02:01 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/24 16:05:21 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,18 @@ public:
 	/* OPERATORS */
 
 	Fixed	&operator=(const Fixed &to_copy);
+
+	bool operator>(const Fixed &operand) const;
+	bool operator<(const Fixed &operand) const;
+	bool operator>=(const Fixed &operand) const;
+	bool operator<=(const Fixed &operand) const;
+	bool operator==(const Fixed &operand) const;
+	bool operator!=(const Fixed &operand) const;
+
+	Fixed operator+(const Fixed &operand) const;
+	Fixed operator-(const Fixed &operand) const;
+	Fixed operator*(const Fixed &operand) const;
+	Fixed operator/(const Fixed &operand) const;
 };
 
 /* OVERLOAD */

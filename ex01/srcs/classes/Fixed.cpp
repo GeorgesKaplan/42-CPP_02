@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:55:47 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/24 11:51:28 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/24 12:02:13 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ Fixed::~Fixed()
 
 /* SETTERS AND GETTERS */
 
-int Fixed::getRawBits(void)
+int Fixed::getRawBits(void) const
 {
 	std::cout << "getRawBits member function called." << std::endl;
 	return (this->_fixed);
@@ -67,6 +67,12 @@ Fixed &Fixed::operator=(const Fixed &to_copy)
 		this->_fixed = to_copy._fixed;
 	}
 	return (*this);
+}
+
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed)
+{
+	os << fixed.toFloat();
+	return os;
 }
 
 /* CONVERTERS */

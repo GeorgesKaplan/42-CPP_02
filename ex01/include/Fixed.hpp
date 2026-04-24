@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:55:42 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/24 11:37:39 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/24 12:02:01 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ public:
 
 	/* SETTERS AND GETTERS */
 
-	int		getRawBits(void);
+	int		getRawBits(void) const;
 	void	setRawBits(int const raw);
 
 	/* CONVERTERS */
@@ -44,5 +44,9 @@ public:
 
 	Fixed	&operator=(const Fixed &to_copy);
 };
+
+/* OVERLOAD */
+
+std::ostream &operator<<(std::ostream &os, const Fixed &fixed);
 
 #endif

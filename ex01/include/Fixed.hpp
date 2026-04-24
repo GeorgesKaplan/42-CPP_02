@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:55:42 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/22 10:42:23 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/24 11:37:39 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ private:
 	static const int	_fractBits = 8;
 
 public:
-	int getRawBits(void);
-	void setRawBits(int const raw);
+	/* CONSTRUCTORS */
 
 	Fixed();
 	Fixed(const int num);
@@ -31,7 +30,19 @@ public:
 	Fixed(const Fixed &to_copy);
 	~Fixed();
 
-	Fixed &operator=(const Fixed &to_copy);
+	/* SETTERS AND GETTERS */
+
+	int		getRawBits(void);
+	void	setRawBits(int const raw);
+
+	/* CONVERTERS */
+
+	float	toFloat(void) const;
+	int		toInt(void) const;
+
+	/* OPERATORS */
+
+	Fixed	&operator=(const Fixed &to_copy);
 };
 
 #endif

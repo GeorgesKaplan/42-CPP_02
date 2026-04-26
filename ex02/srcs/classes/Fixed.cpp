@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:55:47 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/26 11:41:46 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/26 12:04:08 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -161,4 +161,38 @@ int Fixed::toInt(void) const // Shift to the right -> remove fractional part
 float Fixed::toFloat(void) const // Divide by 256 -> 2^_fractBits -> shift to the left
 {
 	return (float(this->_fixed) / (1 << this->_fractBits));
+}
+
+/* FUNCTIONS */
+
+Fixed &Fixed::min(Fixed &a, Fixed &b)
+{
+	if (a < b)
+		return (a);
+	else
+		return (b);
+}
+
+const Fixed &Fixed::min(const Fixed &a, const Fixed &b)
+{
+	if (a < b)
+		return (a);
+	else
+		return (b);
+}
+
+Fixed &Fixed::max(Fixed &a, Fixed &b)
+{
+	if (a > b)
+		return (a);
+	else
+		return (b);
+}
+
+const Fixed &Fixed::max(const Fixed &a, const Fixed &b)
+{
+	if (a > b)
+		return (a);
+	else
+		return (b);
 }

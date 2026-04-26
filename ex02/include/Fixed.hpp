@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:55:42 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/26 11:31:14 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/26 12:04:28 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,12 @@ public:
 	Fixed operator++(int);
 	Fixed &operator--();
 	Fixed operator--(int);
+
+	/* FUNCTIONS */
+	static Fixed &min(Fixed &a, Fixed &b);
+	static const Fixed &min(const Fixed &a, const Fixed &b);
+	static Fixed &max(Fixed &a, Fixed &b);
+	static const Fixed &max(const Fixed &a, const Fixed &b);
 };
 
 /* OVERLOAD */

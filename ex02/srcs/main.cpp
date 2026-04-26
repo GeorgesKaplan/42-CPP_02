@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:55:45 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/26 11:43:23 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/26 12:09:11 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int main(void)
 	a = Fixed(1234.4321f);
 	Fixed const b(10.0f);
 	Fixed const c = b;
+	Fixed d = a - 1000;
+	Fixed const e(1.0f);
 
 	std::cout << "VARIABLES INITIALISATION" << std::endl;
 	std::cout << "a = " << a << "\nb = " << b << "\nc = " << c << std::endl;
@@ -45,6 +47,14 @@ int main(void)
 	std::cout << " a  = " << a << std::endl;
 	std::cout << "--a = " << (--a) << std::endl;
 	std::cout << " a  = " << a << std::endl;
+	std::cout << std::endl;
+	std::cout << "MIN / MAX" << std::endl;
+	std::cout << "a = " << a << " | d = " << d << std::endl;
+	std::cout << "b = " << b << " | e = " << e << std::endl;
+	std::cout << "min(a, d) = " << Fixed::min(a, d) << std::endl;
+	std::cout << "min(b, e) = " << Fixed::min(b, e) << std::endl;
+	std::cout << "max(a, d) = " << Fixed::max(a, d) << std::endl;
+	std::cout << "max(b, e) = " << Fixed::max(b, e) << std::endl;
 
 	return (0);
 }

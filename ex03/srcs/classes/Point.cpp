@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 12:28:55 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/26 13:57:30 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/26 15:36:23 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,8 @@ Point::Point(const float x, const float y) : _x(x), _y(y)
 {
 }
 
-Point::Point(const Point &to_copy)
+Point::Point(const Point &to_copy) : _x(to_copy._x), _y(to_copy._y)
 {
-	*this = to_copy;
 }
 
 Point::~Point()

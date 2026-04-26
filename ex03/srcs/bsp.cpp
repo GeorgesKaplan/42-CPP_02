@@ -14,8 +14,8 @@
 
 static Fixed crossProd(Point const &p1, Point const &p2, Point const &p3)
 {
-	return	((p2.get_x() - p1.get_x()) * (p3.get_y() - p1.get_y())
-		   - (p2.get_y() - p1.get_y()) * (p3.get_x() - p1.get_x()));
+	return	 ((p2.get_x() - p1.get_x()) * (p3.get_y()- p1.get_y())
+			- (p2.get_y() - p1.get_y()) * (p3.get_x() - p1.get_x()));
 }
 
 bool bsp(Point const a, Point const b, Point const c, Point const point)
@@ -23,7 +23,6 @@ bool bsp(Point const a, Point const b, Point const c, Point const point)
 	Fixed d1 = crossProd(a, b, point);
 	Fixed d2 = crossProd(b, c, point);
 	Fixed d3 = crossProd(c, a, point);
-	std::cout << "d1 = " << d1 << " | d2 = " << d2 << " | d3 = " << d3 << std::endl;
 
 	bool is_neg = (d1 < Fixed(0)) || (d2 < Fixed(0)) || (d3 < Fixed(0));
 	bool is_pos = (d1 > Fixed(0)) || (d2 > Fixed(0)) || (d3 > Fixed(0));

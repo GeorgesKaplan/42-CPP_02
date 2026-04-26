@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:55:45 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/26 12:35:14 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/26 14:08:02 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,49 +14,19 @@
 
 int main(void)
 {
-	Fixed a;
-	a = Fixed(1234.4321f);
-	Fixed const b(10.0f);
-	Fixed const c = b;
-	Fixed d = a - 1000;
-	Fixed const e(1.0f);
-	Fixed f = 0.0f;
+	Point a(0.0f, 0.0f);
+	Point b(10.0f, 0.0f);
+	Point c(0.0f, 10.0f);
 
-	std::cout << "VARIABLES INITIALISATION" << std::endl;
-	std::cout << "a = " << a << "\nb = " << b << "\nc = " << c << std::endl;
-	std::cout << std::endl;
-	std::cout << "LOGICAL OPERATORS" << std::endl;
-	std::cout << "Is  a > b : " << (a > b) << std::endl;
-	std::cout << "Is  a < b : " << (a < b) << std::endl;
-	std::cout << "Is b >= c : " << (b >= c) << std::endl;
-	std::cout << "Is b <= c : " << (b <= c) << std::endl;
-	std::cout << "Is a == c : " << (a == c) << std::endl;
-	std::cout << "Is a != c : " << (a != c) << std::endl;
-	std::cout << std::endl;
-	std::cout << "ARITHMETIC OPERATORS" << std::endl;
-	std::cout << "a + b = " << (a + b) << std::endl;
-	std::cout << "a - b = " << (a - b) << std::endl;
-	std::cout << "a * b = " << (a * b) << std::endl;
-	std::cout << "a / b = " << (a / b) << std::endl;
-	std::cout << std::endl;
-	std::cout << "INCREMENT / DECREMENT" << std::endl;
-	std::cout << " f  = " << f << std::endl;
-	std::cout << "f++ = " << (f++) << std::endl;
-	std::cout << " f  = " << f << std::endl;
-	std::cout << "++f = " << (++f) << std::endl;
-	std::cout << " f  = " << f << std::endl;
-	std::cout << "f-- = " << (f--) << std::endl;
-	std::cout << " f  = " << f << std::endl;
-	std::cout << "--f = " << (--f) << std::endl;
-	std::cout << " f  = " << f << std::endl;
-	std::cout << std::endl;
-	std::cout << "MIN / MAX" << std::endl;
-	std::cout << "a = " << a << " | d = " << d << std::endl;
-	std::cout << "b = " << b << " | e = " << e << std::endl;
-	std::cout << "min(a, d) = " << Fixed::min(a, d) << std::endl;
-	std::cout << "min(b, e) = " << Fixed::min(b, e) << std::endl;
-	std::cout << "max(a, d) = " << Fixed::max(a, d) << std::endl;
-	std::cout << "max(b, e) = " << Fixed::max(b, e) << std::endl;
+	Point inside(3.0f, 3.0f);		// Inside
+	Point onEdge(5.0f, 0.0f);		// On edge AB
+	Point onVertex(0.0f, 0.0f);		// On vertex A
+	Point outside(15.0f, 5.0f);		// Outside
+
+	std::cout << "   Inside: " << bsp(a, b, c, inside) << std::endl;		// = 1
+	std::cout << "  On edge: " << bsp(a, b, c, onEdge) << std::endl;		// = 0
+	std::cout << "On vertex: " << bsp(a, b, c, onVertex) << std::endl;		// = 0
+	std::cout << "  Outside: " << bsp(a, b, c, outside) << std::endl;		// = 0
 
 	return (0);
 }

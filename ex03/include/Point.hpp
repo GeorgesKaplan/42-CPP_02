@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:55:42 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/26 12:34:04 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/26 12:56:35 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ public:
 	/* CONSTRUCTORS */
 
 	Point();
+	Point::Point(const float x, const float y);
 	Point(const Point &to_copy);
 	~Point();
 

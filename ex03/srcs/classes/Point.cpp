@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 12:28:55 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/26 13:08:01 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/26 13:57:30 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,7 @@ Point::~Point()
 
 Point &Point::operator=(const Point &to_copy)
 {
-	if (this != &to_copy)
-	{
-		*this = to_copy;
-	}
+	(void)to_copy;
 	return (*this);
 }
 

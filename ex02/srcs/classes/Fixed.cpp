@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:55:47 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/24 16:27:55 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/26 11:41:46 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,32 @@ Fixed Fixed::operator*(const Fixed &operand) const
 Fixed Fixed::operator/(const Fixed &operand) const
 {
 	return (Fixed(this->toFloat() / operand.toFloat()));
+}
+
+Fixed &Fixed::operator++()
+{
+	this->_fixed += (1 << this->_fractBits);
+	return (*this);
+}
+
+Fixed Fixed::operator++(int)
+{
+	Fixed tmp(*this);
+	this->_fixed += (1 << this->_fractBits);
+	return (tmp);
+}
+
+Fixed &Fixed::operator--()
+{
+	this->_fixed -= (1 << this->_fractBits);
+	return (*this);
+}
+
+Fixed Fixed::operator--(int)
+{
+	Fixed tmp(*this);
+	this->_fixed -= (1 << this->_fractBits);
+	return (tmp);
 }
 
 std::ostream& operator<<(std::ostream& os, const Fixed& fixed)

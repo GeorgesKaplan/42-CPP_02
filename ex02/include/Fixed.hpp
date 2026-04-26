@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:55:42 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/24 16:05:21 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/26 11:31:14 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,11 @@ public:
 	Fixed operator-(const Fixed &operand) const;
 	Fixed operator*(const Fixed &operand) const;
 	Fixed operator/(const Fixed &operand) const;
+
+	Fixed &operator++();
+	Fixed operator++(int);
+	Fixed &operator--();
+	Fixed operator--(int);
 };
 
 /* OVERLOAD */

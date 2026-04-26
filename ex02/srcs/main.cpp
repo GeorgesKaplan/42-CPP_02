@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:55:45 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/24 16:15:15 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/26 11:43:23 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,16 @@ int main(void)
 	std::cout << "a - b = " << (a - b) << std::endl;
 	std::cout << "a * b = " << (a * b) << std::endl;
 	std::cout << "a / b = " << (a / b) << std::endl;
+	std::cout << std::endl;
+	std::cout << "INCREMENT / DECREMENT" << std::endl;
+	std::cout << "a++ = " << (a++) << std::endl;
+	std::cout << " a  = " << a << std::endl;
+	std::cout << "++a = " << (++a) << std::endl;
+	std::cout << " a  = " << a << std::endl;
+	std::cout << "a-- = " << (a--) << std::endl;
+	std::cout << " a  = " << a << std::endl;
+	std::cout << "--a = " << (--a) << std::endl;
+	std::cout << " a  = " << a << std::endl;
 
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:55:45 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/26 12:09:11 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/26 12:11:59 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int main(void)
 	Fixed const c = b;
 	Fixed d = a - 1000;
 	Fixed const e(1.0f);
+	Fixed f = 0.0f;
 
 	std::cout << "VARIABLES INITIALISATION" << std::endl;
 	std::cout << "a = " << a << "\nb = " << b << "\nc = " << c << std::endl;
@@ -39,14 +40,15 @@ int main(void)
 	std::cout << "a / b = " << (a / b) << std::endl;
 	std::cout << std::endl;
 	std::cout << "INCREMENT / DECREMENT" << std::endl;
-	std::cout << "a++ = " << (a++) << std::endl;
-	std::cout << " a  = " << a << std::endl;
-	std::cout << "++a = " << (++a) << std::endl;
-	std::cout << " a  = " << a << std::endl;
-	std::cout << "a-- = " << (a--) << std::endl;
-	std::cout << " a  = " << a << std::endl;
-	std::cout << "--a = " << (--a) << std::endl;
-	std::cout << " a  = " << a << std::endl;
+	std::cout << " f  = " << f << std::endl;
+	std::cout << "f++ = " << (f++) << std::endl;
+	std::cout << " f  = " << f << std::endl;
+	std::cout << "++f = " << (++f) << std::endl;
+	std::cout << " f  = " << f << std::endl;
+	std::cout << "f-- = " << (f--) << std::endl;
+	std::cout << " f  = " << f << std::endl;
+	std::cout << "--f = " << (--f) << std::endl;
+	std::cout << " f  = " << f << std::endl;
 	std::cout << std::endl;
 	std::cout << "MIN / MAX" << std::endl;
 	std::cout << "a = " << a << " | d = " << d << std::endl;

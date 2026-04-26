@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:55:47 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/26 12:04:08 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/26 12:13:07 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,27 +121,27 @@ Fixed Fixed::operator/(const Fixed &operand) const
 
 Fixed &Fixed::operator++()
 {
-	this->_fixed += (1 << this->_fractBits);
+	this->_fixed += 1;
 	return (*this);
 }
 
 Fixed Fixed::operator++(int)
 {
 	Fixed tmp(*this);
-	this->_fixed += (1 << this->_fractBits);
+	this->_fixed += 1;
 	return (tmp);
 }
 
 Fixed &Fixed::operator--()
 {
-	this->_fixed -= (1 << this->_fractBits);
+	this->_fixed -= 1;
 	return (*this);
 }
 
 Fixed Fixed::operator--(int)
 {
 	Fixed tmp(*this);
-	this->_fixed -= (1 << this->_fractBits);
+	this->_fixed -= 1;
 	return (tmp);
 }
 

@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 12:28:55 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/26 12:57:40 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/26 13:08:01 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,16 @@ Point &Point::operator=(const Point &to_copy)
 		*this = to_copy;
 	}
 	return (*this);
+}
+
+/* GETTERS */
+
+Fixed Point::get_x() const
+{
+	return (this->_x);
+}
+
+Fixed Point::get_y() const
+{
+	return (this->_y);
 }

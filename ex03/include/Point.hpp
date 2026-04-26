@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:55:42 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/26 12:56:35 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/26 13:06:19 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ public:
 	~Point();
 
 	Point	&operator=(const Point &to_copy);
+
+	/* GETTERS */
+
+	Fixed get_x() const;
+	Fixed get_y() const;
 };
 
 #endif

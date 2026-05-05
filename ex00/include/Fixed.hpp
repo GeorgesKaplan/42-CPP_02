@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:55:42 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/21 11:17:06 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/30 12:13:50 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ private:
 	static const int	_fractBits = 8;
 
 public:
-	int getRawBits(void);
+	int getRawBits(void) const;
 	void setRawBits(int const raw);
 
 	Fixed();
